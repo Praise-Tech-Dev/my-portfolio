@@ -2,19 +2,19 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
-    imageUrl: "/src/assets/shedahouse.jpg",
+    imageUrl: "/shedahouse.jpg",
     name: "Sheda House",
     description: "React JS + Tailwind CSS",
     link: "https://sheda-house.netlify.app/",
   },
   {
-    imageUrl: "/src/assets/academy.jpg",
+    imageUrl: "/academy.jpg",
     name: "Sheda Academy",
     description: "React + Javascript + Tailwind CSS",
     link: "https://academy.shedahouse.com",
   },
   {
-    imageUrl: "/src/assets/multikart.jpg",
+    imageUrl: "/multikart.jpg",
     name: "Multikart",
     description: "React js + Tailwind CSS",
     link: "https://multikart-ecom.vercel.app/",
