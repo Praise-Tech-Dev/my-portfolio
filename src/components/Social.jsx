@@ -1,4 +1,4 @@
-import { FaLinkedinIn, FaGithub, FaXTwitter } from "react-icons/fa6";
+import { FaLinkedinIn, FaGithub, FaXTwitter, FaEnvelope } from "react-icons/fa6";
 import configData from "../data/config.json";
 
 export default function Social() {
@@ -18,13 +18,16 @@ export default function Social() {
                 FaLinkedinIn,
                 FaGithub,
                 FaXTwitter,
+                FaEnvelope,
               };
               const IconComponent = iconMap[socialLink.icon];
+              const isMailTo = socialLink.link.startsWith("mailto:");
 
               return (
                 <a
                   key={index}
                   href={socialLink.link}
+                  target={isMailTo ? "_self" : "_blank"}
                   className="bg-white p-2 rounded-full duration-300 border-2 border-gray-100 hover:border-gray-200 drop-shadow-sm"
                 >
                   {<IconComponent size={20} />}

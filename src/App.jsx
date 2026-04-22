@@ -8,7 +8,7 @@ function App() {
     <>
       <Navbar />
       <div className="pt-[5rem] px-2 py-2">
-        <div className="mx-auto max-w-xl bg-white rounded-xl shadow-lg">
+        <div className="mx-auto md:max-w-xl lg:max-w-[1200px] bg-white rounded-xl shadow-lg">
           <div className="flex flex-col">
             <SiteRoutes />
             <Social />

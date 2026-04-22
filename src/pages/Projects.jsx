@@ -2,29 +2,29 @@ import { useState } from "react";
 
 const PROJECTS = [
   {
-    imageUrl: "/icon-1.jpg",
-    name: "Layers Editor",
-    description: "GSAP + Next JS + Tailwind CSS",
-    link: "https://layers-editor-landing-page.vercel.app/",
+    imageUrl: "/src/assets/shedahouse.jpg",
+    name: "Sheda House",
+    description: "React JS + Tailwind CSS",
+    link: "https://sheda-house.netlify.app/",
   },
   {
-    imageUrl: "/icon-2.jpg",
-    name: "Summarizer AI",
-    description: "React + Typescript + Tailwind CSS",
-    link: "https://ai-summarizer-gpt.vercel.app/",
+    imageUrl: "/src/assets/academy.jpg",
+    name: "Sheda Academy",
+    description: "React + Javascript + Tailwind CSS",
+    link: "https://academy.shedahouse.com",
   },
   {
-    imageUrl: "/icon-3.png",
-    name: "Opsync MVP",
-    description: "Next js + React js + Tailwind CSS",
-    link: "https://opsync-mvp.vercel.app/",
+    imageUrl: "/src/assets/multikart.jpg",
+    name: "Multikart",
+    description: "React js + Tailwind CSS",
+    link: "https://multikart-ecom.vercel.app/",
   },
-  {
-    imageUrl: "/icon-4.png",
-    name: "Blogy Pages",
-    description: "HTML + CSS + Javascript + ES6",
-    link: "https://blogy-pages.netlify.app/",
-  },
+  // {
+  //   imageUrl: "/icon-4.png",
+  //   name: "Blogy Pages",
+  //   description: "HTML + CSS + Javascript + ES6",
+  //   link: "https://blogy-pages.netlify.app/",
+  // },
 ];
 
 const createArrowIcon = (isHovered) => (
@@ -45,15 +45,15 @@ const createArrowIcon = (isHovered) => (
 );
 
 const ProjectImage = ({ imageUrl, name }) => (
-  <div className="rounded-full overflow-hidden items-center justify-center border border-gray-200 hidden md:block">
-    <div className="w-16 h-16 rounded-full overflow-hidden">
+  <div className="rounded-lg overflow-hidden items-center justify-center border border-gray-200 hidden md:block w-full aspect-video">
+    <div className="overflow-hidden w-full h-full">
       <img className="w-full h-full object-cover" src={imageUrl} alt={name} />
     </div>
   </div>
 );
 
 const ProjectContent = ({ name, description }) => (
-  <div className="flex flex-col justify-center">
+  <div className="flex flex-col justify-center px-5 py-2">
     <h1 className="font-medium text-lg text-gray-900">{name}</h1>
     <p className="text-gray-500 text-md">{description}</p>
   </div>
@@ -72,7 +72,8 @@ const ProjectCard = ({ project, isHovered, onMouseEnter, onMouseLeave }) => (
     rel="noopener noreferrer"
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
-    className="drop-shadow-md bg-[#f3f4f6] rounded-lg px-5 py-3 gap-x-3 flex flex-col md:flex-none md:flex-row hover:-translate-y-1 hover:scale-100 duration-300 transition ease-in-out delay-150 hover:shadow-sm border border-gray-200 hover:border-gray-300"
+    // md:flex-none md:flex-row
+    className="drop-shadow-[0_20px_25px_rgba(0,0,0,0.1)] bg-[#f3f4f6] rounded-lg  gap-x-3 flex flex-col  hover:-translate-y-1 hover:scale-100 duration-300 transition ease-in-out delay-150 hover:shadow-sm border border-gray-200 hover:border-gray-300"
   >
     <ProjectImage imageUrl={project.imageUrl} name={project.name} />
     <ProjectContent
@@ -101,7 +102,7 @@ export default function Card() {
     <div className="px-2">
       <div className="flex flex-col bg-white rounded-lg px-5 py-5 max-w-6xl mx-auto">
         <SectionHeader />
-        <div className="flex flex-col gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((project, index) => (
             <ProjectCard
               key={index}

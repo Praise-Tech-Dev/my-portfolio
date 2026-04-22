@@ -1,4 +1,4 @@
-import profile from "../assets/Profile.jpeg";
+import profile from "../assets/Profile.jpg";
 import CopyEmailButton from "./CopyEmailButton";
 import { getConfigData } from "../data/configReader";
 
@@ -47,7 +47,7 @@ export default function Profile() {
         }
       `}</style>
 
-      <div className="flex items-center justify-between px-3 sm:px-5 pt-4 sm:pt-5">
+      <div className="flex items-center justify-between px-3 sm:px-5 pt-4 sm:pt-5 ">
         <div className="text-sm sm:text-base font-medium flex items-center gap-x-1.5 sm:gap-x-2">
           <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-gray-400 rounded-full" />
           {configData.job}
@@ -60,8 +60,49 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="px-3 sm:px-5 pb-5 flex flex-col-reverse md:flex-row md:items-center md:justify-between pt-1.5 sm:pt-2 md:pt-3">
-        <div className="flex flex-col gap-y-1 md:gap-y-2">
+      <div className="relative px-3 sm:px-5 pb-5 flex flex-col-reverse md:flex-row md:items-center md:justify-between pt-1.5 sm:pt-2 md:pt-3 ">
+        {/* BACKGROUND SVG */}
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-40 select-none">
+          <svg
+            viewBox="0 0 1200 500"
+            width="100%"
+            height="100%"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+          >
+            <g fill="none" stroke="#cbd5e1" strokeWidth="1">
+              <path d="M0 250 C150 150 300 350 450 250 C600 150 750 350 900 250 C1050 150 1200 300 1200 300" />
+              <path d="M0 230 C150 130 300 330 450 230 C600 130 750 330 900 230 C1050 130 1200 280 1200 280" />
+              <path d="M0 210 C150 110 300 310 450 210 C600 110 750 310 900 210 C1050 110 1200 260 1200 260" />
+              <path d="M0 190 C150 90 300 290 450 190 C600 90 750 290 900 190 C1050 90 1200 240 1200 240" />
+              <path d="M0 170 C150 70 300 270 450 170 C600 70 750 270 900 170 C1050 70 1200 220 1200 220" />
+              <path d="M0 150 C150 50 300 250 450 150 C600 50 750 250 900 150 C1050 50 1200 200 1200 200" />
+              <path d="M0 130 C150 30 300 230 450 130 C600 30 750 230 900 130 C1050 30 1200 180 1200 180" />
+              <path d="M0 110 C150 10 300 210 450 110 C600 10 750 210 900 110 C1050 10 1200 160 1200 160" />
+            </g>
+          </svg>
+        </div>
+        {/* <div className="">
+          <svg
+            viewBox="0 0 1200 500"
+            width="100%"
+            height="100%"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g fill="none" stroke="#cbd5e1" stroke-width="1" opacity="0.5">
+              <path d="M0 250 C150 150 300 350 450 250 C600 150 750 350 900 250 C1050 150 1200 300 1200 300" />
+              <path d="M0 230 C150 130 300 330 450 230 C600 130 750 330 900 230 C1050 130 1200 280 1200 280" />
+              <path d="M0 210 C150 110 300 310 450 210 C600 110 750 310 900 210 C1050 110 1200 260 1200 260" />
+              <path d="M0 190 C150 90 300 290 450 190 C600 90 750 290 900 190 C1050 90 1200 240 1200 240" />
+              <path d="M0 170 C150 70 300 270 450 170 C600 70 750 270 900 170 C1050 70 1200 220 1200 220" />
+              <path d="M0 150 C150 50 300 250 450 150 C600 50 750 250 900 150 C1050 50 1200 200 1200 200" />
+              <path d="M0 130 C150 30 300 230 450 130 C600 30 750 230 900 130 C1050 30 1200 180 1200 180" />
+              <path d="M0 110 C150 10 300 210 450 110 C600 10 750 210 900 110 C1050 10 1200 160 1200 160" />
+            </g>
+          </svg>
+        </div> */}
+        <div className="relative flex flex-col gap-y-1 md:gap-y-2">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center md:text-left tracking-tight">
             I&rsquo;m {configData.name}
           </h1>
@@ -101,7 +142,7 @@ export default function Profile() {
           </div>
         </div>
 
-        <div className="rounded-full p-1 flex items-center justify-center mb-4 sm:mb-5 md:mb-7">
+        <div className="rounded-full p-1 flex items-center justify-center mb-4 sm:mb-5 md:mb-7 z-10">
           <div className="w-28 h-28 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-b from-gray-100 to-gray-300 border-2 flex items-center justify-center">
             <img
               src={profile}

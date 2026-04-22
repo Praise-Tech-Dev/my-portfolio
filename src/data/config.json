@@ -1,31 +1,35 @@
 {
-  "job": "Website Developer",
-  "name": "Tanveer",
+  "job": "Software Developer",
+  "name": "Praise",
   "desc": "Developer, Creator & Lifelong Learner",
-  "aboutDesc": "I’m Tanveer, a Website Developer focused on crafting sleek high performance websites. I specialize in building responsive, scalable, and visually engaging web experiences using latest technologies.",
-  "email": "muhammadtanveerabbas.dev@gmail.com",
+  "aboutDesc": "I am Praise Adeogun, a Softawre Developer focused on crafting sleek high performance websites. I specialize in building responsive, scalable, and visually engaging web experiences using React JS and Tailwind CSS.",
+  "email": "spraiseadeogun2@gmail.com",
   "status": "on",
-  "hireMeLink": "https://www.linkedin.com/in/muhammadtanveerabbas/",
+  "hireMeLink": "https://www.linkedin.com/in/praise-adeogun-a008b72a6/",
   "projects": [
     {
-      "project-image-url": "/icon-1.jpg",
-      "project-name": "Layers Editor",
-      "project-desc": "GSAP + Next JS + Tailwind CSS",
-      "link": "https://aurielle-jewellary.vercel.app/"
+      "project-image-url": "/src/assets/shedahouse_logo.svg",
+      "project-name": "Sheda House Website",
+      "project-desc": "React JS + Tailwind CSS",
+      "link": "https://sheda-house.netlify.app/"
     }
   ],
   "social": [
     {
       "icon": "FaLinkedinIn",
-      "link": "https://www.linkedin.com/in/muhammadtanveerabbas/"
+      "link": "https://www.linkedin.com/in/praise-adeogun-a008b72a6/"
     },
     {
       "icon": "FaGithub",
-      "link": "https://github.com/MuhammadTanveerAbbas"
+      "link": "https://github.com/Praise-Tech-Dev"
     },
     {
       "icon": "FaXTwitter",
-      "link": "https://x.com/m_tanveerabbas"
+      "link": ""
+    },
+    {
+      "icon": "FaEnvelope",
+      "link": "mailto:spraiseadeogun2@gmail.com"
     }
   ]
 }
